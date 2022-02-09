@@ -20,7 +20,7 @@ class OpenSolid:
                         area.spaces[0].shading.type = 'SOLID'
 
     @staticmethod
-    def register(context):
+    def register():
         # register
         if inst_col_on_scene_load_post not in bpy.app.handlers.load_post:
             bpy.app.handlers.load_post.append(inst_col_on_scene_load_post)

@@ -6,8 +6,6 @@
 
 import bpy
 from bpy.app.handlers import persistent
-from . import open_solid_ops
-from . import open_solid_ui
 from .open_solid import OpenSolid
 from .addon import Addon
 
@@ -28,15 +26,13 @@ bl_info = {
 def open_solid_register():
     # register OpenSolid
     if bpy.context and hasattr(bpy.context, 'scene'):
-        OpenSolid.register(context=bpy.context)
+        OpenSolid.register()
     else:
         return 0.25
 
 
 def register():
     if not Addon.dev_mode():
-        # open_solid_ops.register()
-        # open_solid_ui.register()
         bpy.app.timers.register(
             function=open_solid_register,
             first_interval=0.25
@@ -50,8 +46,6 @@ def register():
 def unregister():
     if not Addon.dev_mode():
         OpenSolid.unregister()
-        # open_solid_ui.unregister()
-        # open_solid_ops.unregister()
 
 
 if __name__ == '__main__':
