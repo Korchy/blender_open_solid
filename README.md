@@ -1,2 +1,1 @@
-# blender_open_solid
-Open Solid
+# Open Solid

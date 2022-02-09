@@ -2,7 +2,7 @@
 # interplanety@interplanety.org
 #
 # GitHub
-#    https://github.com/Korchy/
+#    https://github.com/Korchy/blender_open_solid
 
 import json
 import os
